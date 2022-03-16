@@ -15,7 +15,7 @@ jobs:
           trigger: "/deploy"
           reaction: rocket
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB_TOKEN: "${{ secrets.REPO_ACCESS_TOKEN }}"
     outputs:
       triggered: ${{ steps.check.outputs.triggered }}
 
@@ -32,7 +32,7 @@ jobs:
           repository: ${{ github.repository }}
           issue_id: ${{ github.event.issue.number }}
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB_TOKEN: "${{ secrets.REPO_ACCESS_TOKEN }}"
 
       - name: create deployment
         id: create_deployment
@@ -44,7 +44,7 @@ jobs:
           environment: dev
           auto_merge: false
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB_TOKEN: "${{ secrets.REPO_ACCESS_TOKEN }}"
 
       - name: set deployment status to in progress
         id: start_deployment
@@ -59,7 +59,7 @@ jobs:
           state: in_progress
           mediaType: '{"previews": ["flash", "ant-man"]}'
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB_TOKEN: "${{ secrets.REPO_ACCESS_TOKEN }}"
 
       - name: deploy the pull request
         run: |
@@ -80,7 +80,7 @@ jobs:
           mediaType: '{"previews": ["ant-man"]}'
           state: success
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB_TOKEN: "${{ secrets.REPO_ACCESS_TOKEN }}"
 
       - name: set deployment status to failure
         id: failed_deployment
@@ -96,4 +96,4 @@ jobs:
           mediaType: '{"previews": ["ant-man"]}'
           state: failure
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB_TOKEN: "${{ secrets.REPO_ACCESS_TOKEN }}"
