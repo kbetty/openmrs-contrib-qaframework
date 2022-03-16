@@ -7,7 +7,7 @@ ___
 ![Build Status](https://ci.openmrs.org/plugins/servlet/wittified/build-status/TRUNK-MASTER) | ![Build Status](https://ci.openmrs.org/plugins/servlet/wittified/build-status/RESTWS-RESTWS) | ![Build Status](https://ci.openmrs.org/plugins/servlet/wittified/build-status/FHIR-FM2) | ![Build Status](https://ci.openmrs.org/plugins/servlet/wittified/build-status/SON-OPENMRSCOREMASTER)
 
 
-Install & Upgrade Tests |
+Install & Upgrade Tests | 
 ------------- |
  [![Platform Simple Installation](https://github.com/openmrs/openmrs-contrib-qaframework/actions/workflows/platform-install-simple.yml/badge.svg?branch=master)](https://github.com/openmrs/openmrs-contrib-qaframework/actions/workflows/platform-install-simple.yml) 
  [![Platform Advanced Installation](https://github.com/openmrs/openmrs-contrib-qaframework/actions/workflows/platform-install-advanced.yml/badge.svg?branch=master)](https://github.com/openmrs/openmrs-contrib-qaframework/actions/workflows/platform-install-advanced.yml) 
